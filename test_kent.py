@@ -10,7 +10,8 @@ time.sleep(2)
 content = driver.find_element_by_id('search-results-content')
 assert content != None
 
-print("Success The Search Works!!")
+rows = content.find_elements_by_css_selector('td')
+print("Success The Search Works!! Here is What We Found")
 
-for con in content:
-    print(con.text)
+for row in rows:
+    print(row.text)
