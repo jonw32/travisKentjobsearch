@@ -1,7 +1,8 @@
 from selenium import webdriver
 import time
 
-driver = webdriver.Chrome(executable_path="chromedriver")
+#driver = webdriver.Chrome(executable_path="chromedriver")
+driver = webdriver.PhantomJS()
 driver.get("http://jobs.kent.edu/cw/en-us/listing/")
 driver.find_element_by_id('search-keyword').send_keys("Chemistry")
 time.sleep(2)
