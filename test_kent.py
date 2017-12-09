@@ -7,7 +7,10 @@ driver.get("http://jobs.kent.edu/cw/en-us/listing/")
 driver.find_element_by_id('search-keyword').send_keys("Chemistry")
 time.sleep(2)
 
-content = driver.find_element_by_id('search-results-content')
+content = driver.find_element_by_id('search-results-contnt')
 assert content != None
 
-print("Sucess! Your searchBar returns values")
+print("Success The Search Works!!")
+
+for con in content:
+    print(con.text)
